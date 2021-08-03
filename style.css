@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-primary:rgb(49, 51, 54);
+    --color-secondary:brown;
+    --text-color: white;
+    --color-hover:rgb(45, 45, 87);
+
+}
+
+/*----------------- MENU -----------------------*/
+
+#navbar{
+    background-color: var(--color-secondary);
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position:fixed;
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+}
+
+.nav-list > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    list-style-type: none;
+    font-size: 25px;
+}
+
+.nav-list > li:hover {
+    background-color:var(--color-hover);
+}
+
+.menu-link{
+    text-decoration: none;
+    color:var(--text-color);
+}
+
+.menu-link:hover{
+    color: white;
+}
+
+/*------------------ WELCOME  -------------------*/
+
+#welcome-section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+}
+
+#welcome-section > h1{
+    font-size: 5em;;
+    color: var(--text-color);
+}
+
+#welcome-section > p{
+    font-size:2em;
+    color:var(--color-secondary);
+}
+
+/*----------------- PROJECT --------------------*/
+
+#projects{
+    width: 100vw;
+    height: auto;
+    background-color: var(--color-hover);
+    padding-bottom: 30vh;
+}
+
+.portfolio-container-title{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  
+   
+}
+
+.project-tile{
+    margin: auto;
+    width: max-content;
+    font-size: 35px;
+    border-bottom: 2px solid var(--text-color);
+    line-height: 45px;
+    color: var(--text-color);
+}
+
+.projects-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.project-card{
+    width: 30vw;
+    height: auto;
+    box-shadow: 0 0 10px 0;
+}
+
+.project-img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.project-title{
+    width: 100%;
+    height: 20%;
+    background-color:var(--color-primary);
+    padding: 20px 0 0 0;
+    margin:0;
+    text-align: center;
+    
+}
+
+
+.project-link{
+    text-decoration: none;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.code {
+    color:var(--color-primary);
+    transition: color 0.3s ease-out;
+  }
+
+.project-link:hover{
+    color:var(--text-color);
+    
+}
+
+.project-card:hover{
+    transform: scale(1.05);
+    transition: all 1s ease;
+}
+
+
+.project-link:hover .code{
+    color: var(--color-secondary);
+    transition: all 1s ease;
+    
+}
+
+
+
+
+
+/*---------------- CONTACT ---------------------*/
+#contact{
+    width: 100vw;
+    height: 100vh;
+    background-color:var(--color-primary);
+    border-bottom: 3px solid var(--secondary-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-title{
+    font-size: 6em;
+    text-align: center;
+}
+
+.contact-subtitle{
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.social-container{
+    width: 70vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10vh;
+    font-size: 30px;
+}
+
+#profile-link{
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+#profile-link:hover{
+    color: var(--text-color);
+    transform: translateY(10px);
+    transition: all 0.5s ease;
+}
+
+
+
+
+/*---------------- FOOTER -------------------*/
+footer{
+    width: 100vw;
+    height: 20vh;
+    background-color:var(--primary-color);
+    border-top: 4px solid var(--color-secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: white;
+}
+
+footer > p{
+font-size: 20px;
+text-align: center;
+}
+
+footer > span{
+    font-size: 25px;
+}
+
+
+
+/*-------------------MOBILE--------------*/
+
+@media (max-width:850px) {
+
+    #projects{
+        width: 100vw;
+        height: auto;
+    }
+    .projects-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .project-card{
+        margin-top: 20px;
+    }
+    .social-container{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        margin: 10vh;
+        font-size: 30px;
+    }
+
+    footer{
+        padding: 0 20px 0 20px;
+    }
+}
